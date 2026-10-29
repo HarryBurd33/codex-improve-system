@@ -1,0 +1,6 @@
+.checkpoint/
+HANDOFF.md
+__pycache__/
+*.pyc
+.private/
+dist/
