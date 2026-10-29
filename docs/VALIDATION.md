@@ -25,7 +25,7 @@ Native installation/discovery/invocation and publication checks are completed in
 
 Final source and global installation match on all five files. Native `skills/list(forceReload=true)` found exactly one enabled user-scope installation from both an unrelated Git project and a projectless directory. On Codex CLI 0.164.0, the final explicit `$improve-system` projectless invocation returned the A/B/C menu in 18.24 seconds; the exact natural-language example from a clean unrelated project returned it in 16.77 seconds before auditing setup/history. Both completed successfully using ChatGPT authentication, a read-only sandbox, and no model override. The three affected S01/S02/H03 regression responses also meet their unchanged expectations. See [native evidence](../validation/native-checks.json) and [final scope responses](../validation/candidate2-scope-responses.json).
 
-Remote publication, visibility and saved topics are verified after the initial source push and recorded here before final delivery.
+[The public repository](https://github.com/HarryBurd33/codex-improve-system) was created and its API readback confirmed public visibility, main as the default branch, and MIT license metadata. A fresh immutable GitHub archive download matched all 23 published files against the reviewed local tree. Saved repository topics were read back as `agent-skills`, `ai-workflows`, `codex`, `codex-skills`, `developer-productivity`, `prompt-engineering`, and `self-improvement`. The final documentation commit is checked again against a fresh download before delivery. No private histories, populated review records, credentials, or machine configuration are included.
 
 ## Remaining limits
 

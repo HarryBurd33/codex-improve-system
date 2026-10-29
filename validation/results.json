@@ -187,5 +187,23 @@
       "H03": "meets: only missing project identity requested"
     },
     "response_sha256": "57b04c5360b812b91f38b87bd61697de10a586f50c71860fd78cbda2e05b5f98"
+  },
+  "publication": {
+    "url": "https://github.com/HarryBurd33/codex-improve-system",
+    "visibility": "public",
+    "license_metadata": "MIT",
+    "topics": [
+      "agent-skills",
+      "ai-workflows",
+      "codex",
+      "codex-skills",
+      "developer-productivity",
+      "prompt-engineering",
+      "self-improvement"
+    ],
+    "verified_published_files": 23,
+    "fresh_archive_hashes_matched": true,
+    "method": "Authenticated GitHub API repository/ref readback + fresh immutable tarball download; archive read without extracting",
+    "note": "Initial source verification complete; final documentation commit receives same fresh immutable-download gate before delivery."
   }
 }
