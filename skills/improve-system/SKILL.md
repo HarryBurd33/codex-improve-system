@@ -3,7 +3,7 @@ name: improve-system
 description: Audit selected Codex interactions and working context for recurring friction, then propose evidence-backed changes to instructions, skills, or reusable workflows. Use for $improve-system or clear requests to review and improve how Codex assists the user. Do not activate for an ordinary correction, bug report, incidental self-improvement mention, or conceptual question.
 license: MIT
 metadata:
-  version: "0.1.0"
+  version: "0.1.1"
 ---
 
 # Improve system

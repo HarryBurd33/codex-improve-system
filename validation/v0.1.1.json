@@ -1,0 +1,38 @@
+{
+  "version": "0.1.1",
+  "date": "2026-10-28",
+  "local_package_checks": {
+    "passed": 8,
+    "command": "python3 -m unittest discover -s tests -v"
+  },
+  "reader_procedure": {
+    "oversized_response_turns": 5,
+    "successful_retry_turns": 1,
+    "visible_body_characters": 8019,
+    "batch_guideline_characters": 12000,
+    "older_pages_unread_disclosed": true,
+    "missing_image_disclosed": true,
+    "full_history_coverage_claimed": false,
+    "method": "Actual bounded-reader procedure in one current context; private source material and identifiers excluded",
+    "limitation": "Not an isolated or blind model evaluation, efficacy study, or every-host guarantee"
+  },
+  "installed_copy": {
+    "all5files_match_source": true,
+    "native_enabled_user_scope_from_two_contexts": true,
+    "model_turns_for_discovery": 0
+  },
+  "skill_files_sha256": {
+    "SKILL.md": "e58d24b326cbf11daa039f84c9a8d1f4ca2d57d68abf1906c0f559578998dc20",
+    "references/changes.md": "70649368f373f4e56ff8ea5025f8440bd91fca294dbe0dab47b2e0b32476d816",
+    "references/history.md": "7955d02867f40165ba2ab64ecefda25bbb013f99a16e1f40320959934a022e0d",
+    "templates/record.json": "1e5fb2ef5dfe8a4dcc80571c9c48602ea1acbe0e4aaf6b9bdf8977929728bc50",
+    "templates/review.md": "94adaee0d220defde58e0f6689b74a7e2ae1cb9b8ac241dd0a4098b794194789"
+  },
+  "unchanged_boundaries": [
+    "three history scopes",
+    "individual proposal approval",
+    "stale-target checks",
+    "private scope-limited records",
+    "rollback preserving unrelated edits"
+  ]
+}

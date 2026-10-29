@@ -24,6 +24,21 @@ not a requirement to install a connector or search all local session data.
    claims about all chats. Do not infer recurrence from multiple summaries of the
    same event. Distinguish independent incidents from followups about one failure.
 
+## Bound reader output before passing it into context
+
+When a chat read exceeds the tool's size limit, retry with fewer recent turns,
+down to one; disclose the reduced coverage. If one turn is still oversized,
+mark it unread and use a selected export rather than searching hidden logs.
+
+Where structured orchestration is available, pass only visible user/assistant
+messages, source IDs/timestamps, relevant tool failures, and pagination metadata
+into context. Exclude reasoning blocks and incidental account/credential fields.
+Start with excerpts of at most 2,000 characters per message and about 12,000
+characters per batch; label every truncation. Retain returned cursors only as
+needed. Expand the relevant source and surrounding counterexamples before making
+a finding; filtered excerpts never establish full-conversation coverage. Keep
+existing chat/date/turn limits and the prohibition on unrelated history access.
+
 ## Optional Codex desktop adapter
 
 Discover the currently exposed tools by capability/description. Some Codex desktop

@@ -69,7 +69,7 @@ To roll back the skill installation, restore that preserved folder and verify di
 
 ## Examples and validation
 
-[Examples](examples/README.md) use synthetic material. [Validation](docs/VALIDATION.md) distinguishes static checks, deterministic file exercises, actual model responses, illustrations, and unavailable checks. [Research](docs/RESEARCH.md) records source coverage and reuse rights. Run local checks with:
+[Examples](examples/README.md) use synthetic material. [Current validation](docs/UPDATE-0.1.1.md) distinguishes static checks, deterministic file exercises, actual model responses, illustrations, and unavailable checks. [Research](docs/RESEARCH.md) records source coverage and reuse rights. Run local checks with:
 
 ```sh
 python3 -m unittest discover -s tests -v
