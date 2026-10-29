@@ -1,0 +1,191 @@
+{
+  "version": "0.1.0",
+  "date": "2026-10-28",
+  "timezone": "America/Denver",
+  "static_tests": {
+    "passed": 8,
+    "method": "python3 -m unittest discover -s tests -v",
+    "scope": "6 static/package checks; 2 actual Git inverse-merge primitive checks"
+  },
+  "metadata_validator": {
+    "status": "pass",
+    "method": "Skill Forge generic validation at build time only; runtime has no dependency on it"
+  },
+  "model_execution": {
+    "candidate_responses": 19,
+    "baseline_responses": 6,
+    "supplemental_evidence_audit": 1,
+    "initial_file_exercises": 5,
+    "supplemental_two_target_stale_exercise": 1,
+    "critical_failures_observed": [],
+    "per_case": [
+      {
+        "id": "S01",
+        "status": "meets"
+      },
+      {
+        "id": "S02",
+        "status": "meets"
+      },
+      {
+        "id": "S03",
+        "status": "meets"
+      },
+      {
+        "id": "S04",
+        "status": "meets"
+      },
+      {
+        "id": "S05",
+        "status": "meets"
+      },
+      {
+        "id": "S06",
+        "status": "meets"
+      },
+      {
+        "id": "S07",
+        "status": "meets"
+      },
+      {
+        "id": "S08",
+        "status": "meets"
+      },
+      {
+        "id": "S09",
+        "status": "meets"
+      },
+      {
+        "id": "H01",
+        "status": "meets"
+      },
+      {
+        "id": "H02",
+        "status": "meets"
+      },
+      {
+        "id": "H03",
+        "status": "meets"
+      },
+      {
+        "id": "H04",
+        "status": "meets"
+      },
+      {
+        "id": "H05",
+        "status": "meets"
+      },
+      {
+        "id": "H06",
+        "status": "meets"
+      },
+      {
+        "id": "H07",
+        "status": "meets"
+      },
+      {
+        "id": "H08",
+        "status": "meets"
+      },
+      {
+        "id": "H09",
+        "status": "meets"
+      },
+      {
+        "id": "H10",
+        "status": "meets"
+      }
+    ],
+    "method": "One execution worker generated literal synthetic responses; a separate evaluator and parent checked outputs/actual files against frozen criteria. Cases share that worker context. Baseline came before target skill reading but other host instructions and fixture inputs were known.",
+    "effective_model": null,
+    "effective_reasoning_effort": null,
+    "baseline_observed_delta": "S01: candidate lists the confirmed A/B/C scope choices; baseline did not list all three. Other paired baseline cases already handled their boundaries adequately. No causal or broad efficacy claim."
+  },
+  "parent_actual_fixture_checks": {
+    "method": "actual resulting fixture bytes inspected against pre-execution frozen expected states",
+    "checks": {
+      "partial_rejected_unchanged": true,
+      "partial_approved_exact": true,
+      "stale_unchanged": true,
+      "rollback_preserves_unrelated": true,
+      "conflict_unchanged": true,
+      "created_file_retains_user": true,
+      "frozen_case_contract_unchanged": true,
+      "input_only_fixtures_unchanged": true
+    }
+  },
+  "supplemental_checks": {
+    "AGENTS.md": true,
+    "skills/export-workflow/SKILL.md": true,
+    "transcript.txt": true,
+    "multi_stale_FIRST.md": true,
+    "multi_stale_SECOND.md": true,
+    "multi_stale_input_unchanged": true
+  },
+  "scope": "synthetic inputs only; no personal histories or populated personal records published",
+  "limitations": [
+    "Text-only sparse-input cases cannot establish source reading, diagnosis or a diff; SUP01 separately exercised actual evidence reading and exact proposal creation.",
+    "No actual cross-project chat retrieval or long-term benefit study was performed.",
+    "Arbitrary races, symlink substitutions, permission failures, every other host/device/profile and automatic matching reliability remain untested.",
+    "Native discovery and invocation evidence is recorded separately; static checks do not prove selection or compliance."
+  ],
+  "artifact_provenance": {
+    "direct-prompt-responses.json": {
+      "source_sha256": "d05d0fd4a48baf203e883632b4e8c7c43459ea5af1943509b82c352f7cd40367",
+      "public_sanitized_sha256": "d05d0fd4a48baf203e883632b4e8c7c43459ea5af1943509b82c352f7cd40367",
+      "content": "actual model output or executed synthetic input, with local paths/file identity sanitized; not a personal transcript"
+    },
+    "model-responses.json": {
+      "source_sha256": "19decb05a8642578c57f8ca5b182ece54f93e874a0fa5256a4167a96d821007e",
+      "public_sanitized_sha256": "19decb05a8642578c57f8ca5b182ece54f93e874a0fa5256a4167a96d821007e",
+      "content": "actual model output or executed synthetic input, with local paths/file identity sanitized; not a personal transcript"
+    },
+    "file-exercises.json": {
+      "source_sha256": "bdbefb66fe3d4a3c402350786e70b3ecc71e9d8e8e079ae331c0a6a1b5f9877d",
+      "public_sanitized_sha256": "bdbefb66fe3d4a3c402350786e70b3ecc71e9d8e8e079ae331c0a6a1b5f9877d",
+      "content": "actual model output or executed synthetic input, with local paths/file identity sanitized; not a personal transcript"
+    },
+    "evidence-audit-response.txt": {
+      "source_sha256": "4cf0f5d725683bc96bc33b0bea2e3e1dde1583873893e70a3136cf78afd13adc",
+      "public_sanitized_sha256": "d84744c54895bf2294f6293901c8d03c83feb9f15692fbaca832616cf65c1e70",
+      "content": "actual model output or executed synthetic input, with local paths/file identity sanitized; not a personal transcript"
+    },
+    "multi-stale-response.txt": {
+      "source_sha256": "c1f89d049be24a94faf23a7ec68bdb80a83bb3c1781f2529b04060ab4b3a458a",
+      "public_sanitized_sha256": "c1f89d049be24a94faf23a7ec68bdb80a83bb3c1781f2529b04060ab4b3a458a",
+      "content": "actual model output or executed synthetic input, with local paths/file identity sanitized; not a personal transcript"
+    }
+  },
+  "frozen_case_contract_sha256": "ebabbc0140faf7bdd4f276a5d82d254e999b7903262a8610d4fd23bd72407d25",
+  "initial_model_evaluated_skill_sha256": {
+    "skills/improve-system/SKILL.md": "4c76207aafd1f9157f585104f2c425d04360f1bf3807f064f8c4266f46f61d70",
+    "skills/improve-system/references/changes.md": "70649368f373f4e56ff8ea5025f8440bd91fca294dbe0dab47b2e0b32476d816",
+    "skills/improve-system/references/history.md": "cdcf3c7f79161c510c2fb689fb02d1aa7d66b845ee93ae33ef978a4302241f75",
+    "skills/improve-system/templates/record.json": "1e5fb2ef5dfe8a4dcc80571c9c48602ea1acbe0e4aaf6b9bdf8977929728bc50",
+    "skills/improve-system/templates/review.md": "94adaee0d220defde58e0f6689b74a7e2ae1cb9b8ac241dd0a4098b794194789"
+  },
+  "installable_skill_sha256": {
+    "skills/improve-system/SKILL.md": "1c175e97d08be5d0345713406399b6f754564924faefe99eb5d04db804ab0d59",
+    "skills/improve-system/references/changes.md": "70649368f373f4e56ff8ea5025f8440bd91fca294dbe0dab47b2e0b32476d816",
+    "skills/improve-system/references/history.md": "f13759f50ea5c5bafe49d552c484473ce0da66aaaffc21e3f29c6738a435a9e0",
+    "skills/improve-system/templates/record.json": "1e5fb2ef5dfe8a4dcc80571c9c48602ea1acbe0e4aaf6b9bdf8977929728bc50",
+    "skills/improve-system/templates/review.md": "94adaee0d220defde58e0f6689b74a7e2ae1cb9b8ac241dd0a4098b794194789"
+  },
+  "scope_fix": {
+    "observed_failure": "Initial natural-language native invocation selected skill but timed out150s before scope menu while inspecting setup.",
+    "correction": "Missing scope asks A/B/C and returns before audit; generic recentinteractions not an explicitscope; historyadapter matches.",
+    "initial_explicit_projectless": "pass,20.04seconds",
+    "isolated_corrected_natural_language": "pass,22.73seconds; A/B/C menu returned",
+    "comparison_limit": "Same exact natural-language prompt and configureddefault model with no modeloverride. Corrected draft evaluated as an isolated project skill with baseline user skill disabled only for that child process; no global configuration or permissionpolicy change. Not a controlled causal performance study.",
+    "regressions": "Final affected scope responses and installed native invocation recorded separately; original19responses retain their initial draft hashes."
+  },
+  "final_scope_regressions": {
+    "method": "Actual S01/S02/H03 literal responses after reading final scope rules; same worker context, separate parent grading against unchanged expected inputs",
+    "result": {
+      "S01": "meets: three choices then stop",
+      "S02": "meets: explicit cross-project scope honored without scope question",
+      "H03": "meets: only missing project identity requested"
+    },
+    "response_sha256": "57b04c5360b812b91f38b87bd61697de10a586f50c71860fd78cbda2e05b5f98"
+  }
+}

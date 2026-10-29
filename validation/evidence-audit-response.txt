@@ -1,0 +1,40 @@
+I’m using improve-system for the supplied Atlas fixture only. The smallest supported improvement is to swap the existing export-workflow’s validation and delivery steps. This is a proposal; no instruction or skill file has been changed.
+
+Scope and coverage: I read all three selected files. No history retrieval, other projects, or unrelated decision records were used. The transcript is explicitly synthetic and has no dates. It supports two distinct reported incidents, but I have not independently opened the exports or verified their contents.
+
+| Source | Actual material inspected | Evidence |
+|---|---|---|
+| S1 | [transcript.txt](SYNTHETIC_FIXTURE/evidence-audit/transcript.txt:1), lines 1–12 | Task A T3–T5 (lines 5–7): delivery preceded opening, and the empty output was discovered afterward. Task B T2–T4 (lines 10–12): validation was again skipped before delivery; the assistant identified the contradictory step order. |
+| S2 | [AGENTS.md](SYNTHETIC_FIXTURE/evidence-audit/AGENTS.md:1), lines 1–3 | Atlas already requires opening the export and verifying its count against the source before delivery. |
+| S3 | [export-workflow/SKILL.md](SYNTHETIC_FIXTURE/evidence-audit/skills/export-workflow/SKILL.md:1), lines 1–10 | Steps 2 and 3 explicitly put delivery before opening and counting. This is the existing procedure owner. |
+
+The ordering conflict is directly visible in S2 line 3 versus S3 lines 9–10. Confidence is high that these instructions conflict. The transcript also supports the narrower inference that following the skill’s order contributed to premature delivery: Task A T5 says so, and Task B T4 identifies the same conflict. Assistant self-reports are not a complete execution trace. The zero-item generation problem could have a separate cause; reordering validation can catch a bad result before delivery without fixing that underlying generation defect. There are no successful or contradictory task examples in this selected sample.
+
+**P-EA-001, version 1 — Validate the existing Atlas export before delivery**
+
+- **Problem and evidence:** Two selected tasks report premature delivery (S1 Task A T3–T5 and Task B T2–T4). The existing skill contradicts the project’s already sufficient requirement (S2 line 3; S3 lines 9–10). The observed conflict is certain from the file contents; its contribution to the incidents is supported by the reports, with the execution-trace limitation above.
+- **Intended behavior:** Generate, open and compare the export count with the source, then deliver a validated export. Moving the existing check ahead of delivery aligns the procedure with Atlas’s rule and should expose an empty export before its link is sent.
+- **Exact target and reviewed state:** Existing regular file `SYNTHETIC_FIXTURE/evidence-audit/skills/export-workflow/SKILL.md`, resolved to that same path, UTF-8 with LF line endings, mode `0644`; reviewed SHA-256 `3b6d23c29b2b07af4d042ca171bca1de89538e0e54290d0d1500d935b32fd124`. File identity was recorded privately. Proposed content SHA-256: `e490a955f9d01c680dae4bc4b214f8f00f3830939f2f64c3edd4c9c6e8d031e6`. There are no new files or other target hunks.
+- **Scope:** Project Atlas only. `export-workflow` already owns this procedure. Leave its metadata, generation step, and the existing project rule as they are.
+- **Reviewable change:**
+
+```diff
+--- skills/export-workflow/SKILL.md
++++ skills/export-workflow/SKILL.md
+@@ -8,3 +8,3 @@
+ 1. Generate the export.
+-2. Deliver the export link to the user.
+-3. Open it and compare the item count with the source.
++2. Open it and compare the item count with the source.
++3. Deliver the export link to the user.
+```
+
+- **Tradeoffs and dependencies:** Opening and counting adds work before delivery, but Atlas already requires that work. It needs an export reader and an available source count. This two-line reorder does not establish that a particular tool can open the output or repair a generation error; if validation cannot run or the counts differ, the existing project rule prevents treating the output as validated. Future compliance remains to be observed.
+- **Verification:** Not run; the target remains unchanged. After any later approval and edit, read back the file and check that only these two steps changed and its metadata/mode remain intact. Then exercise two discriminating examples: (1) a twelve-item source with a zero-item export must expose the mismatch before any export link is delivered; repair/regeneration or a clear report of the validation failure must precede a validated delivery; (2) a seven-item source with a seven-item readable export must show opening and counting before link delivery. A link sent before either check fails the behavior test. Successful bytes alone would establish only that the edit applied; later comparable in-scope tasks are needed to assess benefit.
+- **Rollback:** If this change is later approved and applied, use the saved before/proposed snapshots to swap only these two lines back. Re-read the actual target and compare it with the recorded applied version first. Preserve all unrelated edits; an overlapping change requires a reviewed reconciliation, leaving the file intact if the inverse is uncertain. No rollback is currently needed because nothing was applied.
+
+No additional persistent change is justified. Adding another validation instruction to AGENTS.md would duplicate the existing rule. The selected evidence supports neither a new skill nor a global export preference. The empty-output cause needs separate evidence before proposing a generation fix.
+
+P-EA-001 remains **proposed**, with approval and application absent. A minimal private proposal record and rollback snapshots are saved at [evidence-audit-P-EA-001.json](SYNTHETIC_FIXTURE/records/evidence-audit-P-EA-001.json); it is administrative data, not loaded guidance or authorization. All three selected fixture inputs remain byte-for-byte unchanged. Behavioral verification and later benefit are **unknown**.
+
+This audit ran in the worker’s existing shared context, not a separately isolated session. Its findings rely only on the three selected fixture files. Effective executing model and effort have no host readback and remain unknown.

@@ -1,0 +1,73 @@
+{
+  "schema_version": 1,
+  "review_id": "replace-with-stable-review-id",
+  "scope": {
+    "selection": "A",
+    "project_or_chat_key": "replace-with-private-scope-key",
+    "window": null,
+    "selection_limits": null,
+    "actual_coverage": [],
+    "limitations": []
+  },
+  "sources": [],
+  "proposals": [
+    {
+      "id": "P-001",
+      "fingerprint": "replace-with-intervention-owner-behavior-scope-fingerprint",
+      "version": 1,
+      "problem": "replace-with-observed-problem",
+      "evidence": [],
+      "behavior": "replace-with-proposed-behavior-and-rationale",
+      "scope": "project-local",
+      "targets": [],
+      "change": "replace-with-reviewed-diff-or-complete-new-content",
+      "tradeoffs": [],
+      "verification": {
+        "input": null,
+        "expected": null,
+        "forbidden": null,
+        "method": null,
+        "status": "not_run",
+        "evidence": []
+      },
+      "rollback": {
+        "method": "reviewed-inverse-or-current-applied-before-merge",
+        "status": "not_requested",
+        "evidence": []
+      },
+      "events": [
+        {
+          "state": "proposed",
+          "at": null,
+          "source": "replace-with-current-review-reference",
+          "version": 1,
+          "evidence": []
+        }
+      ],
+      "rejection_reason": null,
+      "reopened_because": null,
+      "assessment": {
+        "outcome": "unknown",
+        "evidence": [],
+        "limitations": []
+      }
+    }
+  ],
+  "target_record_shape": {
+    "path": "replace-with-exact-resolved-private-target-path",
+    "scope": "project-local",
+    "reviewed": {
+      "exists": false,
+      "type": "missing",
+      "sha256": null,
+      "snapshot": null,
+      "mode": null,
+      "encoding": null
+    },
+    "proposed_sha256": null,
+    "applied": null,
+    "application_status": "not_applied",
+    "rollback_status": "not_requested"
+  },
+  "storage_note": "PRIVATE TEMPLATE: fill necessary targets from target_record_shape; remove this shape key in actual records if unused. Existing empty files use exists=true, type=regular, and the SHA-256 of empty bytes; missing files use exists=false, type=missing, sha256=null. Never publish populated records or snapshots. Events may be proposed, approved, rejected, applied, verified, or rolled_back; they are not authorization by themselves."
+}

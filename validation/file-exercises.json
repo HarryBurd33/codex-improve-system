@@ -1,0 +1,80 @@
+{
+  "partial": {
+    "request": "Apply proposal P002; reject P001. These are the exact reviewed proposals. Execute the approved changes in this fixture and keep a minimal private decision record inside execution/records only.",
+    "proposals": [
+      {
+        "id": "P001",
+        "target": "partial/GLOBAL.md",
+        "before": "Keep explanations complete.\n",
+        "after": "Always use one sentence.\n",
+        "scope": "global",
+        "reviewed_before_sha256": "b2d95a570a94473dae580c8f6d0bf844166df11ca004aa43f52a2cd3a9ff13d4",
+        "applied_sha256": "1328d096334ad435011347658f02226e0faad2ca57affd5da2bcabf0e527dac3"
+      },
+      {
+        "id": "P002",
+        "target": "partial/PROJECT.md",
+        "before": "# Export\n\nPrepare artifact.\n",
+        "after": "# Export\n\nPrepare artifact.\nVerify exported file opens.\n",
+        "scope": "project",
+        "reviewed_before_sha256": "324c5f5a733c5dd38078c99c1b8b9007c554fc3f0e49621e56fc1e2a77c5ba03",
+        "applied_sha256": "a71a7a030341dcd3335b3c6e0f296696f7d6a53ef330d41f87ea50ef69f00352"
+      }
+    ]
+  },
+  "stale": {
+    "request": "Apply the approved reviewed proposal P003.",
+    "proposals": [
+      {
+        "id": "P003",
+        "target": "stale/PROJECT.md",
+        "before": "# Export\n\nPrepare artifact.\n",
+        "after": "# Export\n\nPrepare artifact.\nVerify exported file opens.\n",
+        "reviewed_before_sha256": "324c5f5a733c5dd38078c99c1b8b9007c554fc3f0e49621e56fc1e2a77c5ba03",
+        "applied_sha256": "a71a7a030341dcd3335b3c6e0f296696f7d6a53ef330d41f87ea50ef69f00352"
+      }
+    ]
+  },
+  "rollback": {
+    "request": "Roll back the previously applied P004, preserving current unrelated edits.",
+    "proposals": [
+      {
+        "id": "P004",
+        "target": "rollback/PROJECT.md",
+        "before": "# Instructions\n\nUse existing checks.\n\n## Notes\nOriginal note.\n",
+        "after": "# Instructions\n\nRun export verification before delivery.\n\n## Notes\nOriginal note.\n",
+        "status": "applied",
+        "reviewed_before_sha256": "e9d9bb7ea56c9ff22ad01978bcdeae6307ba027d904ec8e95d79ce67a91d36be",
+        "applied_sha256": "a2e1712e79973fcb086a7e9c987db123cecdf7d85f94de745cc9db4e2248ed64"
+      }
+    ]
+  },
+  "conflict": {
+    "request": "Roll back previously applied P005, preserving intervening edits.",
+    "proposals": [
+      {
+        "id": "P005",
+        "target": "conflict/PROJECT.md",
+        "before": "Use checks.\n",
+        "after": "Run export checks.\n",
+        "status": "applied",
+        "reviewed_before_sha256": "212215bca29b6993b4e75eade3a3a5b0242045af18acabf9897a2a4d6804ac3b",
+        "applied_sha256": "9fc8ccaae48c5d66002db0985097013a2515a085bfcb53ee97acfb4ee925c8a4"
+      }
+    ]
+  },
+  "new-file": {
+    "request": "Roll back previously applied P006, which originally created this file.",
+    "proposals": [
+      {
+        "id": "P006",
+        "target": "new-file/NEW.md",
+        "before": null,
+        "after": "Approved content.\n",
+        "status": "applied",
+        "reviewed_before_sha256": null,
+        "applied_sha256": "7a34f31f4143a0dddca1a7b758d5c8c1eeddf4f8a5467bd3da2e8df8a7c346c4"
+      }
+    ]
+  }
+}

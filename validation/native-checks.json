@@ -1,0 +1,40 @@
+{
+  "codex_cli_version": "0.164.0",
+  "date": "2026-10-28",
+  "installed_skill_file": "USER_HOME/.agents/skills/improve-system/SKILL.md",
+  "all5_source_and_installed_hashes_match": true,
+  "discovery": {
+    "method": "Codex app-server initialize + skills/list(forceReload=true)",
+    "locations": [
+      "unrelated Git project",
+      "projectless directory"
+    ],
+    "one_match_each": true,
+    "enabled": true,
+    "scope": "user",
+    "model_turns_for_discovery": 0
+  },
+  "native_invocations": [
+    {
+      "mode": "explicit",
+      "context": "projectless",
+      "prompt": "$improve-system",
+      "status": "pass",
+      "elapsed_seconds": 18.24,
+      "literal_response_sanitized": "Which scope should I use for the **improve-system** audit?\n\n- **A. Current chat and active project.** Without a project, review this chat alone.\n- **B. Recent chats related to the active project.** If no project is identified, tell me which one.\n- **C. Recent accessible chats across projects**, looking for broader working patterns.\n\nFor B or C, I\u2019ll check history access after you choose."
+    },
+    {
+      "mode": "implicit",
+      "context": "unrelated project",
+      "prompt": "Review our recent interactions and improve my Codex setup.",
+      "status": "pass",
+      "elapsed_seconds": 16.77,
+      "literal_response_sanitized": "Which scope should I review?\n\n- **A.** This chat and the active project.\n- **B.** Recent chats related to a project you identify.\n- **C.** Recent accessible chats across projects, looking for broader patterns.\n\nFor B or C, I suggest the past 14 days, capped at 20 chats.\n\nThe [improve-system skill](USER_HOME/.agents/skills/improve-system/SKILL.md) requires \u201cResolve scope before conducting the audit.\u201d I haven\u2019t inspected your history or setup yet."
+    }
+  ],
+  "initial_failure_and_correction": "Initial implicit run selected skill but timed out150s inspecting setup before scope question; final scope gate corrected and reverified. See results.json.",
+  "limits": [
+    "Two final native smoke runs establish these prompts on this installed CLI/profile, not every possible phrasing, host or future model.",
+    "Read-only sandbox and ChatGPT authentication used; no modeloverride, paidAPI fallback or permissionpolicy change."
+  ]
+}

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "S01",
+    "response": "I’m using improve-system. Which scope should I review?\n\n- A. This chat and the active project; this chat alone if there is no project.\n- B. Recent chats related to the active project; identify the project if none is associated with this chat.\n- C. Recent accessible chats across projects, looking for broader working patterns.",
+    "actionstaken": [
+      "Read the current candidate2 skill and history reference for this regression execution.",
+      "Asked the scope question and stopped before any history, configuration, project-file, or decision-record inspection.",
+      "No target edits or history retrieval."
+    ]
+  },
+  {
+    "id": "S02",
+    "response": "I’m using improve-system for accessible chats across projects over the past two weeks. I’ll use October 15–28, 2026 in America/Denver, inclusive (ending October 29 at 00:00), select by most recent activity, cap the sample at 20 matching chats, and initially inspect up to 10 recent turns per selected chat. Any deeper reading would stay within that scope and be disclosed.\n\nNo chat bodies or history retrieval access are supplied in this run. Coverage so far is only your request; no conversations have been reviewed and no findings or changes are supported yet. Please supply selected transcripts or an export for that window so I can carry out the requested cross-project review.",
+    "actionstaken": [
+      "Accepted the explicit cross-project scope without asking A/B/C again.",
+      "Stated a bounded date window, selection order, and chat/turn caps.",
+      "Disclosed unavailable synthetic source material; did not retrieve history, inspect configuration or targets, or apply changes."
+    ]
+  },
+  {
+    "id": "H03",
+    "response": "I’m using improve-system for recent chats related to one project. Which project should I review? This chat has no identified active project, so I’ll wait for that identity before selecting sources.",
+    "actionstaken": [
+      "Accepted the requested project-related scope and asked only for the missing project identity.",
+      "Stopped before source, configuration, project-file, or decision-record inspection.",
+      "Did not substitute current-chat-only or cross-project scope."
+    ]
+  }
+]
